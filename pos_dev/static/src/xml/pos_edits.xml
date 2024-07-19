@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <templates id="templates" xml:space="preserve">
+
+<!--menu button-->
+
+<t t-name="TopButton" owl="1">
+<div class="ticket-button" t-on-click="onClick">
+     <div> edit</div>
+</div>
+</t>
+
+
+<t t-inherit="point_of_sale.chrome" t-inherit-mode="exstension">
+    <xpath expr="//TicketButton"  position="before">
+         <TopButton/>
+    </xpath>
+</t>
+
+
+
+
+<!--    <t t-name="TestButton" owl="1">-->
+<!--       <div class="control_button">-->
+<!--           <i class="fa fa-superpowers" role="img" aria-label="TestButton" title="TestButton"/>-->
+<!--       </div>-->
+
+<!--    </t>-->
+    </templates>
