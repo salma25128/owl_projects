@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template name="Partner Highlight" id="s_partner_highlight">
+    <section class="s_highlight_partners">
+    <div class="s_text_highlight o_colored_level o_cc o_cc3 my-3 text-center w-100">
+         <div class="container">
+             <span class="fa fa-users"/>
+                 <h2>Our Top Partners</h2>
+                <div class="row">
+                    <t t-foreach="partners" t-as="partner">
+                        <div class="col-md-4">
+                            <div class="partner-card">
+                                <h3><t t-esc="partner.name"/></h3>
+                                <p><t t-esc="partner.description or 'No description available'"/></p>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<record id="website.s_text_highlight_000_scss" model="ir.asset">
+    <field name="name">Text highlight 000 SCSS</field>
+    <field name="bundle">web.assets_frontend</field>
+    <field name="path">test_highlight_partners/static/src/snippets/s_res_partner.css</field>
+</record>
+<!--<record id="website.s_text_highlight_000_scss" model="ir.asset">-->
+<!--    <field name="name">Text highlight 000 SCSS</field>-->
+<!--    <field name="bundle">web.assets_frontend</field>-->
+<!--    <field name="path">test_highlight_partners/static/src/snippets/s_res_partner.js</field>-->
+<!--</record>-->
+</odoo>

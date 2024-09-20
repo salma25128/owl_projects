@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_partner_form_highlight" model="ir.ui.view">
+        <field name="name">res.partner.form.highlight</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="highlight_partner" string="Highlight Partner"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
